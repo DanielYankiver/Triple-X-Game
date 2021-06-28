@@ -2,6 +2,8 @@
 
 int main()
 {
-    std::cout << "Hello, World!";
+    std::cout << "You are a secret agent breaking into a server room...";
+    std::cout << std::endl;
+    std::cout << "You need to enter the correct codes to continue...";
     return 0; 
-}
+} 
