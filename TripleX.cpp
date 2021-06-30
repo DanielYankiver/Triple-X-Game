@@ -1,10 +1,14 @@
 #include <iostream>
 
-int main()
+void PrintIntroduction()
 {
-    // Print welcome messages to the terminal 
     std::cout << "You are a secret agent breaking into a server room...\n";
     std::cout << "You need to enter the correct codes to continue...\n\n";
+}
+
+void PlayGame()
+{
+    PrintIntroduction();
     
     // Declare a 3 number code 
     const int CodeA = 4;
@@ -17,7 +21,7 @@ int main()
     // Print CodeSum and CodeProduct to the terminal 
     std::cout << "+ There are 3 numbers in the code";
     std::cout << "\n+ The codes add up to: " << CodeSum;
-    std::cout << "\n+ The codes multiply to give: " << CodeProduct; 
+    std::cout << "\n+ The codes multiply to give: " << CodeProduct << std::endl; 
 
     // Store player guess
     int GuessA, GuessB, GuessC;
@@ -31,11 +35,14 @@ int main()
     {
         std::cout << "\nYou win!";
     } 
-
     else
     {
         std::cout << "\nYou lose!";
     }
+}
 
+int main()
+{
+    PlayGame();
     return 0; 
 } 
