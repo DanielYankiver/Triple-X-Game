@@ -29,6 +29,5 @@ int main()
     int GuessSum = GuessA + GuessB + GuessC;
     int GuessProduct = GuessA * GuessB * GuessC;
   
-
     return 0; 
 } 
