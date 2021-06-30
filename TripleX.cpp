@@ -45,11 +45,18 @@ bool PlayGame()
 
 int main()
 {
+    int LevelDifficulty = 1;
     while(true)
     {
         bool bLevelComplete = PlayGame();
         std::cin.clear(); // Clears any errors
-        std::cin.ignore(); // DIscards the buffer 
+        std::cin.ignore(); // Discards the buffer 
+
+        if (bLevelComplete) 
+        {
+            ++LevelDifficulty;
+        }
+        
     }
 
     return 0; 
