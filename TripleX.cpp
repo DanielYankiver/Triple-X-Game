@@ -1,14 +1,14 @@
 #include <iostream>
 
-void PrintIntroduction()
+void PrintIntroduction(int Difficulty)
 {
-    std::cout << "\n\nYou are a secret agent breaking into a server room...\n";
-    std::cout << "You need to enter the correct codes to continue...\n\n";
+    std::cout << "\n\nYou are a secret agent breaking into a level " << Difficulty;
+    std::cout << " secure server room... \nEnter the correct codes to continue...\n\n";
 }
 
-bool PlayGame()
+bool PlayGame(int Difficulty)
 {
-    PrintIntroduction();
+    PrintIntroduction(Difficulty);
     
     const int CodeA = 4;
     const int CodeB = 3;
@@ -48,7 +48,7 @@ int main()
     int LevelDifficulty = 1;
     while(true)
     {
-        bool bLevelComplete = PlayGame();
+        bool bLevelComplete = PlayGame(LevelDifficulty);
         std::cin.clear(); // Clears any errors
         std::cin.ignore(); // Discards the buffer 
 
