@@ -2,7 +2,7 @@
 
 void PrintIntroduction()
 {
-    std::cout << "You are a secret agent breaking into a server room...\n";
+    std::cout << "\n\nYou are a secret agent breaking into a server room...\n";
     std::cout << "You need to enter the correct codes to continue...\n\n";
 }
 
@@ -10,13 +10,13 @@ void PlayGame()
 {
     PrintIntroduction();
     
-    // Declare a 3 number code 
     const int CodeA = 4;
     const int CodeB = 3;
     const int CodeC = 2;
 
     const int CodeSum = CodeA + CodeB + CodeC; 
     const int CodeProduct = CodeA * CodeB * CodeC; 
+
  
     // Print CodeSum and CodeProduct to the terminal 
     std::cout << "+ There are 3 numbers in the code";
@@ -43,6 +43,12 @@ void PlayGame()
 
 int main()
 {
-    PlayGame();
+    while(true)
+    {
+        PlayGame();
+        std::cin.clear(); // Clears any errors
+        std::cin.ignore(); // DIscards the buffer 
+    }
+
     return 0; 
 } 
